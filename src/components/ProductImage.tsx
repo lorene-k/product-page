@@ -11,7 +11,7 @@ export function ProductImage({ imageUrl, name }: ProductImageProps) {
             component="img"
             src={imageUrl}
             alt={name}
-            sx={{ width: '100%', height: 'auto', borderRadius: 2 }}
+            sx={{ width: '80%', height: 'auto', borderRadius: 2 }}
         />
     )
 }

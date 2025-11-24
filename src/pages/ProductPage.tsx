@@ -33,12 +33,12 @@ export function ProductPage({ productId }: { productId: string }) {
     return (
         <Container>
             <Box sx={{ p: 4 }}>
-                <Typography variant="h2" gutterBottom sx={{ color:"cyan"}}>{title}</Typography>
+                <Typography variant="h2" gutterBottom sx={{ color: "white" }}>{title}</Typography>
                 <Typography variant="h3">{data.brand}</Typography>
 
                 {image && <ProductImage imageUrl={image} name={title} />}
 
-                <Box sx={{ display: "flex", alignItems: "center", mt: 2, justifyContent:"space-between" }}>
+                <Box sx={{ display: "flex", alignItems: "center", mt: 2, justifyContent: "space-between" }}>
                     <Typography variant="h6" sx={{ mt: 2 }}>
                         Price: {price}€
                     </Typography>
@@ -53,6 +53,9 @@ export function ProductPage({ productId }: { productId: string }) {
                         sx={{ mt: 1 }}
                         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }}
                     />
+                    <Typography variant="body2" sx={{ mt: 2, fontStyle: "italic", color: "#999999" }}>
+                        {data.returnPolicy}
+                    </Typography>
                 </Box>
             </Box>
         </Container>
