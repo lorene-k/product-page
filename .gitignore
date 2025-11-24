@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*.local
+
+# OS files
+.DS_Store
+
+# Editor settings
+.vscode/
+*.swp
+
+# Temporary
+*.local
+
+# My assets
+notes.pdf
