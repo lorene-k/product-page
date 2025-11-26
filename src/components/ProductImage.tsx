@@ -11,7 +11,6 @@ interface ProductImageProps {
 
 export function ProductImage({ images, name }: ProductImageProps) {
     const [activeIndex, setActiveIndex] = useState(0);
-
     const maxSteps = images.length;
 
     const handleNext = () => {
