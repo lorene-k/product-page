@@ -25,10 +25,9 @@ export function ProductPage({ productId }: { productId: string }) {
     }
 
     const title = data.title || "Unknown product";
-    const image = data.images?.[0];
-    const price = data.price;
+    const price = data.price || "N/A";
     const rating = data.rating || 0;
-    const description = data.description;
+    const description = data.description || "No description available.";
 
     return (
         <Container>
@@ -36,7 +35,7 @@ export function ProductPage({ productId }: { productId: string }) {
                 <Typography variant="h2" gutterBottom sx={{ color: "white" }}>{title}</Typography>
                 <Typography variant="h3">{data.brand}</Typography>
 
-                {image && <ProductImage imageUrl={image} name={title} />}
+                <ProductImage images={data.images} name={title} />
 
                 <Box sx={{ display: "flex", alignItems: "center", mt: 2, justifyContent: "space-between" }}>
                     <Typography variant="h6" sx={{ mt: 2 }}>
